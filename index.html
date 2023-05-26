@@ -12,14 +12,10 @@
         <title>Formulário Válido</title>
     </head>
 
-    <body>  
+    <body background="imgs/Sistema de Gerenciamento de Cliente(1).png">  
 
         <!-- Cabeçalho com título e subtítulo (ambos com css de id "titulo") -->
-        <div>
-            <h1 id="titulo">Cadastro de Cliente</h1>
-            <p id="subtitulo">insira suas informações</p>
-            <br>
-        </div>
+     
 
         <!-- Início do formulário -->
         <form>
@@ -27,13 +23,13 @@
             <fieldset class="grupo">
                 <!-- Campo do nome com legenda "nome" e css de classe "campo" -->
                 <div class="campo">
-                    <label for="nome"><strong>Nome</strong></label>
+                    <label for="nome"><strong>Nome Completo:</strong></label>
                     <input type="text" name="nome" id="nome" required>
                 </div>
 
                 <!-- Campo do sobrenome com legenda "sobrenome" e css de classe "campo" -->
                 <div class="campo">
-                    <label for="sobrenome"><strong>Sobrenome</strong></label>
+                    <label for="sobrenome"><strong>ID:</strong></label>
                     <input type="text" name="sobrenome" id="sobrenome" required>
                 </div>
             </fieldset> 
@@ -46,26 +42,27 @@
 
             <!-- Campo de desenvolvimento web com 3 opções de botões selecionáveis (radio button) e css de classe "campo" -->
             <div class="campo">
-                <label><strong>De qual lado da aplicação você desenvolve?</strong></label>
+                <label><strong>Tipo de cliente: </strong></label>
                 <label>
-                    <input type="radio" name="devweb" value="frontend" checked>Front-end
+                    <input type="radio" name="devweb" value="frontend" checked>Pessoa física 
                 </label>
                 <label>
-                    <input type="radio" name="devweb" value="backend">Back-end
+                    <input type="radio" name="devweb" value="backend"> Pessoa jurídica
                 </label>
-                <label>
-                    <input type="radio" name="devweb" value="fullstack">Fullstack
-                </label>
+                
             </div>
 
             <!-- Campo de senioridade com 3 opções para escolha (select option) e css de classe "campo" -->
             <div class="campo">
-                <label for="senioridade"><strong>Senioridade</strong></label>
+                <label for="senioridade"><strong>Escolha seu vendedor:</strong></label>
                 <select id="senioridade" required>
-                  <option selected disabled value="">Selecione</option>
-                  <option>Júnior</option>
-                  <option>Pleno</option>
-                  <option>Sênior</option>
+                  <option selected disabled value=""> &nbsp;&nbsp; Selecione</option>
+                  <option>João Hiago</option>
+                  <option>José Francisco</option>
+                  <option>Aline Sousa</option>
+                  <option>Eliabe castro</option>
+                  <option>Francinelly Nascimento</option>
+
                 </select>
             </div>
 
