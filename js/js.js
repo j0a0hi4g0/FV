@@ -34,6 +34,14 @@ function exemploCookies() {
     eraseCookie("nome");
 }
 
+function validarID(event) {
+    var tecla = event.which || event.keyCode;
+  
+    if (tecla < 48 || tecla > 57) {
+      event.preventDefault();
+    }
+  }
+
 function validarDataNascimento() {
     var dataNascimento = document.getElementById("dataNascimento").value;
     var padraoData = /^\d{2}\/\d{2}\/\d{4}$/;

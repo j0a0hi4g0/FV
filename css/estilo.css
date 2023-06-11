@@ -74,7 +74,6 @@ fieldset.grupo .campo {
     background: #E0E0F8;
 }
 
-/* Elemento de classe "botao" */
 .botao {
     font-size: 1.2em;
     background: #59429d;
@@ -85,7 +84,7 @@ fieldset.grupo .campo {
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
     position: absolute;
-    top: 175%; /* Ajuste a porcentagem conforme necessário */
+    top: 175%; 
     left: 50%;
     margin-right: -50%;
     transform: translate(-50%, -50%);
