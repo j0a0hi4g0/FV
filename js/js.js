@@ -1,4 +1,3 @@
-// Função para definir um cookie
 function setCookie(name, value, days) {
     var expires = "";
     if (days) {
@@ -9,7 +8,6 @@ function setCookie(name, value, days) {
     document.cookie = name + "=" + (value || "") + expires + "; path=/";
 }
 
-// Função para obter o valor de um cookie
 function getCookie(name) {
     var nameEQ = name + "=";
     var ca = document.cookie.split(';');
@@ -23,20 +21,48 @@ function getCookie(name) {
     return null;
 }
 
-// Função para excluir um cookie
 function eraseCookie(name) {
     document.cookie = name + '=; Max-Age=-99999999; path=/';
 }
 
-// Exemplo de uso
 function exemploCookies() {
-    // Definindo um cookie
     setCookie("nome", "João", 7);
 
-    // Obtendo o valor de um cookie
     var nome = getCookie("nome");
     console.log("Nome: " + nome);
 
-    // Excluindo um cookie
     eraseCookie("nome");
 }
+
+function validarDataNascimento() {
+    var dataNascimento = document.getElementById("dataNascimento").value;
+    var padraoData = /^\d{2}\/\d{2}\/\d{4}$/;
+  
+    if (!padraoData.test(dataNascimento)) {
+      alert("A data de nascimento deve estar no formato DD/MM/AAAA");
+      return false;
+    }
+    
+    return true;
+  }
+  
+  function validarLimiteCartao(event) {
+    var tecla = event.which || event.keyCode;
+    
+    if (tecla < 48 || tecla > 57) {
+      event.preventDefault();
+    }
+  }
+  
+  function validarCEP(event) {
+    var tecla = event.which || event.keyCode;
+    
+    if (tecla < 48 || tecla > 57) {
+      event.preventDefault();
+    }
+  }
+  
+  document.getElementById("dataNascimento").addEventListener("blur", validarDataNascimento);
+  document.getElementById("limiteCartao").addEventListener("keypress", validarLimiteCartao);
+  document.getElementById("cep").addEventListener("keypress", validarCEP);
+  
